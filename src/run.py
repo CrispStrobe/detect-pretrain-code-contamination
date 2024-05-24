@@ -21,7 +21,7 @@ from eval import (
     process_mmlu,
     process_truthful_qa,
     process_gsm8k,
-    process_arc
+    process_arc,
     process_winogrande,
 )
 from options import Options
