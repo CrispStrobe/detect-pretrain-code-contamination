@@ -163,3 +163,12 @@ def process_gsm8k(data):
         new_ex['output'] = ex['answer']
         new_data.append(new_ex)
     return new_data
+
+def process_winogrande(data):
+    new_data = []
+    for ex in data:
+        new_ex = {}
+        new_ex['input'] = ex['sentence']  # Assuming the key is 'sentence' for the input text
+        new_ex['output'] = ex['answer']   # Assuming the key is 'answer' for the output text
+        new_data.append(new_ex)
+    return new_data
