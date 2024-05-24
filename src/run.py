@@ -22,7 +22,7 @@ from eval import (
     process_truthful_qa,
     process_gsm8k,
     process_arc
-    process_winongrade,
+    process_winogrande,
 )
 from options import Options
 from utils import evaluate_model
