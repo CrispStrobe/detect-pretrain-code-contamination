@@ -20,6 +20,7 @@ from eval import (
     dump_jsonl,
     process_mmlu,
     process_truthful_qa,
+    process_gsm8k,
 )
 from options import Options
 from utils import evaluate_model
