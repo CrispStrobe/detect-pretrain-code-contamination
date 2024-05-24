@@ -275,7 +275,8 @@ if __name__ == "__main__":
         #data = convert_huggingface_data_to_list_dic(dataset)
         data = process_gsm8k(dataset)
     elif args.data == "winogrande":
-        dataset = load_dataset("winogrande", "winogrande_xl", split="test")
+        dataset = load_dataset("tinyBenchmarks/tinyWinogrande", "winogrande_xl", split="validation")
+        #cf. https://github.com/huggingface/lighteval/blob/a98210fd3a2d1e8bface1c32b72ebd5017173a4c/src/lighteval/tasks/extended/tiny_benchmarks/main.py#L191
         data = convert_huggingface_data_to_list_dic(dataset)
         data = process_winogrande(data)  # You may need to create this function if processing is required
 
