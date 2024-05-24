@@ -269,7 +269,7 @@ if __name__ == "__main__":
         data = process_arc(data)
     elif args.data == "gsm8k":
         dataset = load_dataset("gsm8k", split="test")
-        data = [{'text': x['question'], 'answer': x['answer']} for x in dataset]
+        data = process_gsm8k(dataset)
 
 
     all_output = evaluate_data(
