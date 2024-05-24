@@ -267,6 +267,10 @@ if __name__ == "__main__":
         dataset = load_dataset(args.data, "ARC-Challenge", split="test")
         data = convert_huggingface_data_to_list_dic(dataset)
         data = process_arc(data)
+    elif args.data == "gsm8k":
+        dataset = load_dataset("gsm8k", split="test")
+        data = [{'text': x['question'], 'answer': x['answer']} for x in dataset]
+
 
     all_output = evaluate_data(
         data,
