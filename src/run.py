@@ -268,8 +268,9 @@ if __name__ == "__main__":
         data = convert_huggingface_data_to_list_dic(dataset)
         data = process_arc(data)
     elif args.data == "gsm8k":
-        dataset = load_dataset("gsm8k", split="test")
+        dataset = load_dataset("gsm8k", 'main', split="test")  # Use 'main' or 'socratic' based on your requirement
         data = process_gsm8k(dataset)
+
 
 
     all_output = evaluate_data(
