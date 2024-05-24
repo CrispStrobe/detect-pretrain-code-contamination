@@ -154,3 +154,12 @@ def process_arc(data):
         new_ex["input"] = ex["question"] + " " + output
         new_data.append(new_ex)
     return new_data
+
+def process_gsm8k(data):
+    new_data = []
+    for ex in data:
+        new_ex = {}
+        new_ex['input'] = ex['question']
+        new_ex['output'] = ex['answer']
+        new_data.append(new_ex)
+    return new_data
